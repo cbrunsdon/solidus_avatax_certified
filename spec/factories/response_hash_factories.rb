@@ -1,32 +1,32 @@
 FactoryBot.define do
 
   factory :response_hash_success, class: Hash do
-    id 0
-    code "R432426823"
-    companyId 0
-    date "2017-05-31"
-    paymentDate "2017-05-31"
-    status "Temporary"
-    type "SalesOrder"
-    currencyCode "USD"
-    customerVendorCode "1"
-    reconciled false
-    referenceCode "R432426823"
-    totalAmount 10.0
-    totalExempt 0.0
-    totalTax 0.4
-    totalTaxable 10.0
-    totalTaxCalculated 0.4
-    adjustmentReason "NotAdjusted"
-    locked false
-    version 1
-    exchangeRateEffectiveDate "2017-05-31"
-    exchangeRate 1.0
-    isSellerImporterOfRecord false
-    modifiedDate "2017-05-31T22:04:02.1273454Z"
-    modifiedUserId 37777
-    taxDate "0001-01-01T00:00:00"
-    lines [{
+    id { 0 }
+    code { "R432426823" }
+    companyId { 0 }
+    date { "2017-05-31" }
+    paymentDate { "2017-05-31" }
+    status { "Temporary" }
+    type { "SalesOrder" }
+    currencyCode { "USD" }
+    customerVendorCode { "1" }
+    reconciled { false }
+    referenceCode { "R432426823" }
+    totalAmount { 10.0 }
+    totalExempt { 0.0 }
+    totalTax { 0.4 }
+    totalTaxable { 10.0 }
+    totalTaxCalculated { 0.4 }
+    adjustmentReason { "NotAdjusted" }
+    locked { false }
+    version { 1 }
+    exchangeRateEffectiveDate { "2017-05-31" }
+    exchangeRate { 1.0 }
+    isSellerImporterOfRecord { false }
+    modifiedDate { "2017-05-31T22:04:02.1273454Z" }
+    modifiedUserId { 37777 }
+    taxDate { "0001-01-01T00:00:00" }
+    lines { [{
         "id" => 0,
         "transactionId" => 0,
         "lineNumber" => "1-LI",
@@ -67,33 +67,36 @@ FactoryBot.define do
             "rateType" => "General",
             "rateTypeCode" => "G"
         }]
-    }]
-    addresses [{
-        "id" => 0,
-        "transactionId" => 0,
-        "boundaryLevel" => "Address",
-        "line1" => "915 S Jackson St",
-        "city" => "Montgomery",
-        "region" => "AL",
-        "postalCode" => "36104",
-        "country" => "US",
-        "taxRegionId" => 2052799,
-        "latitude" => "32.365963",
-        "longitude" => "-86.296036"
-    }, {
-        "id" => 0,
-        "transactionId" => 0,
-        "boundaryLevel" => "Address",
-        "line1" => "1600 Pennsylvania Ave NW",
-        "city" => "Washington",
-        "region" => "DC",
-        "postalCode" => "20500",
-        "country" => "US",
-        "taxRegionId" => 949,
-        "latitude" => "38.898636",
-        "longitude" => "-77.036543"
-    }]
-    summary [{
+    }] }
+    addresses {
+      [{
+          "id" => 0,
+          "transactionId" => 0,
+          "boundaryLevel" => "Address",
+          "line1" => "915 S Jackson St",
+          "city" => "Montgomery",
+          "region" => "AL",
+          "postalCode" => "36104",
+          "country" => "US",
+          "taxRegionId" => 2052799,
+          "latitude" => "32.365963",
+          "longitude" => "-86.296036"
+      }, {
+          "id" => 0,
+          "transactionId" => 0,
+          "boundaryLevel" => "Address",
+          "line1" => "1600 Pennsylvania Ave NW",
+          "city" => "Washington",
+          "region" => "DC",
+          "postalCode" => "20500",
+          "country" => "US",
+          "taxRegionId" => 949,
+          "latitude" => "38.898636",
+          "longitude" => "-77.036543"
+      }]
+    }
+    summary {
+      [{
         "country" => "US",
         "region" => "AL",
         "jurisType" => "State",
@@ -112,7 +115,8 @@ FactoryBot.define do
         "taxCalculated" => 0.4,
         "nonTaxable" => 0.0,
         "exemption" => 0.0
-    }]
+      }]
+    }
 
     initialize_with { attributes.stringify_keys }
   end

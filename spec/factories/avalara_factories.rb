@@ -59,26 +59,26 @@ FactoryBot.modify do
 
   factory :address, class: Spree::Address do
     transient do
-      country_iso_code 'US'
-      state_code 'AL'
+      country_iso_code { 'US' }
+      state_code { 'AL' }
     end
 
-    firstname 'John'
-    lastname 'Doe'
-    company 'Company'
-    address1 '915 S Jackson St'
-    address2 ''
-    city 'Montgomery'
-    state_name 'Alabama'
-    zipcode '36104'
-    phone '555-555-0199'
-    alternative_phone '555-555-0199'
+    firstname { 'John' }
+    lastname { 'Doe' }
+    company { 'Company' }
+    address1 { '915 S Jackson St' }
+    address2 { '' }
+    city { 'Montgomery' }
+    state_name { 'Alabama' }
+    zipcode { '36104' }
+    phone { '555-555-0199' }
+    alternative_phone { '555-555-0199' }
 
     state do |address|
       if !Spree::State.find_by(name: address.state_name).nil?
         Spree::State.find_by(name: address.state_name)
       else
-         address.association(:state)
+        address.association(:state)
       end
     end
 
@@ -89,10 +89,9 @@ FactoryBot.modify do
         address.association(:country, iso: country_iso_code)
       end
     end
-
   end
 
   factory :ship_address, parent: :address do
-    address1 '915 S Jackson St'
+    address1 { '915 S Jackson St' }
   end
 end

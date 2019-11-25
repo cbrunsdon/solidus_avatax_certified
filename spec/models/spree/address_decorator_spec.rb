@@ -50,7 +50,7 @@ describe Spree::Address, type: :model do
 
       it 'builds a cache key' do
         expect(subject).
-          to eq("Spree::Address-#{address.id}-10005-Herndon-AL-US")
+          to eq("Spree::Address-#{address.id}-10005-Montgomery-AL-US")
       end
     end
 
@@ -59,7 +59,7 @@ describe Spree::Address, type: :model do
 
       it 'builds a cache key' do
         expect(subject).
-          to eq("Spree::Address--10005-Herndon-AL-US")
+          to eq("Spree::Address--10005-Montgomery-AL-US")
       end
     end
   end

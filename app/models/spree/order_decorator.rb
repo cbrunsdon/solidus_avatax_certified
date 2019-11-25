@@ -25,7 +25,6 @@ Spree::Order.class_eval do
 
     if persisted?
       create_avalara_transaction if avalara_transaction.nil?
-      line_items.reload
     elsif avalara_transaction.nil?
       build_avalara_transaction
     end
@@ -38,7 +37,6 @@ Spree::Order.class_eval do
 
     if persisted?
       create_avalara_transaction if avalara_transaction.nil?
-      line_items.reload
     elsif avalara_transaction.nil?
       build_avalara_transaction
     end
